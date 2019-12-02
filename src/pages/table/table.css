@@ -1,0 +1,32 @@
+.table {
+  /* margin-top: 3rem; */
+  text-align: left;
+}
+
+.table--title {
+  height: 4rem;
+  background: #806;
+  color: #f7f7f7;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.table--contents {
+  background: #f7f7f7;
+  padding-left: 1rem;
+}
+
+.table--contents--row {
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.row-data {
+  width: 7.5%;
+  text-align: center;
+}
+
+.row-name {
+  width: 32.5%;
+}
