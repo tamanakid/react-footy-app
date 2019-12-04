@@ -1,11 +1,11 @@
 import React from 'react';
-import TableLayout from 'pages/table/TableLayout';
+import LayoutTable from 'pages/table/LayoutTable';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <TableLayout></TableLayout>
+      <LayoutTable></LayoutTable>
     </div>
   );
 }

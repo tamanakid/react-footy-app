@@ -1,8 +1,9 @@
 import React from 'react';
+import CompTeamRow from './CompTeamRow';
 import { fetchTable } from 'api/table/apiTable';
 import './table.css';
 
-export default class TableLayout extends React.Component {
+export default class LayoutTable extends React.Component {
 
   constructor(props) {
     super(props);
@@ -39,22 +40,10 @@ export default class TableLayout extends React.Component {
             <div className="row-data">GD</div>
           </div>
           {this.state.teams.map((team, index) =>
-            <div className="table--contents--row" key={index}>
-              <div className="row-data">{team.pos}</div>
-              <div className="row-name">{team.name}</div>
-              <div className="row-data bold">{team.points}</div>
-              <div className="row-data">{team.played}</div>
-              <div className="row-data">{team.wins}</div>
-              <div className="row-data">{team.draws}</div>
-              <div className="row-data">{team.loses}</div>
-              <div className="row-data">{team.goalsFor}</div>
-              <div className="row-data">{team.goalsAgainst}</div>
-              <div className="row-data">{team.goalDifference}</div>
-            </div>
+            <CompTeamRow team={team} key={index}/>
           )}
         </div>
       </div>
     );
   }
-
 }
