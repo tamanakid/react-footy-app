@@ -1,0 +1,57 @@
+.table {
+  /* margin-top: 3rem; */
+  text-align: left;
+
+  &--title {
+    height: 4rem;
+    background: #608;
+    color: #f7f7f7;
+    font-size: 1.5rem;
+    padding: 2rem 10%;
+  }
+
+
+  &--contents {
+    background: #f7f7f7;
+    padding-left: 1rem;
+    padding: 0 10%;
+
+    &--row {
+      height: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      transition: background-color 0.3s ease-in-out, font-weight 0.1s;
+
+      &.champions {
+        background-color: #cfd;
+      }
+      &.europa {
+        background-color: #def;
+      }
+      &.relegation {
+        background-color: #fcc;
+      }
+      
+      &-team:hover {
+        color: #304;
+        background-color: #edf;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .row-data {
+        width: 7.5%;
+        text-align: center;
+      }
+      
+      .row-name {
+        width: 32.5%;
+      }
+    }
+  }
+}
+
+
+

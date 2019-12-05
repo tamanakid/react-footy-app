@@ -1,0 +1,17 @@
+@import 'index';
+
+.team {
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'logo description';
+
+  &-color1 {
+    @each $name, $hex in $colors {
+      &-#{$name} {
+        background: $hex;
+      }
+    }
+  }
+
+}
