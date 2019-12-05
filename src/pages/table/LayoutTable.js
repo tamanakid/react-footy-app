@@ -3,7 +3,7 @@ import CompTeamRow from './CompTeamRow';
 import { fetchTable } from 'api/table/apiTable';
 import './table.css';
 
-export default class LayoutTable extends React.Component {
+class LayoutTable extends React.Component {
 
   constructor(props) {
     super(props);
@@ -40,10 +40,13 @@ export default class LayoutTable extends React.Component {
             <div className="row-data">GD</div>
           </div>
           {this.state.teams.map((team, index) =>
-            <CompTeamRow team={team} key={index}/>
+            <CompTeamRow team={team} key={index} />
           )}
         </div>
       </div>
     );
   }
 }
+
+
+export default LayoutTable;

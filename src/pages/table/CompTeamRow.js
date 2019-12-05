@@ -1,10 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
-export default class CompTeamRow extends React.Component {
+class CompTeamRow extends React.Component {
 
   constructor(props) {
     super(props);
-    this.checkQualification.bind(this);
+    this.checkQualification = this.checkQualification.bind(this);
+    this.goToTeam = this.goToTeam.bind(this);
   }
 
   checkQualification() {
@@ -20,9 +22,13 @@ export default class CompTeamRow extends React.Component {
     return '';
   }
 
+  goToTeam() {
+    this.props.history.push(`team/${this.props.team.teamId}`);
+  }
+
   render() {
     return (
-      <div className={`table--contents--row table--contents--row-team ${this.checkQualification()}`}>
+      <div className={`table--contents--row table--contents--row-team ${this.checkQualification()}`} onClick={this.goToTeam}>
         <div className="row-data">{this.props.team.pos}</div>
         <div className="row-name">{this.props.team.name}</div>
         <div className="row-data bold">{this.props.team.points}</div>
@@ -38,3 +44,6 @@ export default class CompTeamRow extends React.Component {
   }
 
 }
+
+
+export default withRouter(CompTeamRow);
