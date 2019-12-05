@@ -1,7 +1,7 @@
 import React from 'react';
 import CompTeamRow from './CompTeamRow';
 import { fetchTable } from 'api/table/apiTable';
-import './table.css';
+import './table.scss';
 
 class LayoutTable extends React.Component {
 

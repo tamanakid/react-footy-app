@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import LayoutTable from 'pages/table/LayoutTable';
 import LayoutTeam from 'pages/team/LayoutTeam';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchTeam } from 'api/team/apiTeam'
-import './team.css';
+import './team.scss';
 
 class LayoutTeam extends React.Component {
 
