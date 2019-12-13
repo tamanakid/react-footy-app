@@ -23,8 +23,17 @@ class LayoutTeam extends React.Component {
   render() {
     return (
       <div className={`team team-color1-${this.state.team.color1}`}>
-        <div className="team--title">{this.state.team.name}</div>
-        <img alt="logo" src={this.state.team.logoUrl}></img>
+        <div className="team--logo header">
+          <div style={{ height: '60%' }}>
+            <img alt="logo" src={this.state.team.logoUrl}></img>
+          </div>
+        </div>
+        <div className="team--title header">
+          {this.state.team.name}
+        </div>
+        <div className="header">
+          &nbsp;
+        </div>
         <div className="team--description">
           <div>{this.state.team.color1}</div>
           <div>{this.state.team.color2}</div>

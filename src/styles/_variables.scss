@@ -1,12 +1,18 @@
 $colors: (
-  'white': #f7f7f7,
+  'white': #eee,
   'sky': #9bf,
-  'blue': #16f,
+  'blue': #07d,
   'navy': #036,
-  'red': #c00,
-  'black': #000,
-  'yellow': #fd0,
-  'gold': #ea0,
+  'red': #c22,
+  'black': #222,
+  'yellow': #fd4,
+  'gold': #ea3,
   'green': #0a0,
   'claret': #904,
-)
+);
+
+@each $name, $hex in $colors {
+  @debug "#{$name} saturation: #{saturation($hex)}";
+  @debug "#{$name} hue: #{hue($hex)}";
+  @debug "#{$name} lightness: #{lightness($hex)}";
+}

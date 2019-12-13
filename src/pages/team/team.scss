@@ -2,14 +2,44 @@
 
 .team {
   display: grid;
-  grid-template-areas:
-    'title title'
-    'logo description';
+  grid-template-rows: 5rem 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
+
+  &--title {
+    display: grid;
+    align-content: center;
+    font-weight: bold;
+    letter-spacing: 0.075rem;
+    word-spacing: 0.25rem;
+    // grid-area: title;
+    // color: #f7f7f7;
+    font-size: 1.5rem;
+  }
+
+  &--logo {
+    display: grid;
+    align-content: center;
+    // grid-area: logo;
+  }
+
+  &--description {
+    // grid-area: description;
+    display: grid;
+    align-content: center;
+    grid-column: span 3;
+  }
 
   &-color1 {
     @each $name, $hex in $colors {
       &-#{$name} {
-        background: $hex;
+        & > .header {
+          background: $hex;
+          @if (lightness($hex) >= 50%) {
+            color: #111;
+          } @else {
+            color: #eee;
+          }
+        }
       }
     }
   }
