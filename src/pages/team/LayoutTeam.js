@@ -12,12 +12,11 @@ class LayoutTeam extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this);
-    fetchTeam({ body: { teamId: this.props.id } }).then((response) => {
-      this.setState({
-        team: response.team,
+    const teamId = Number(this.props.match.params.teamId);
+    fetchTeam({ body: { teamId } })
+      .then((response) => {
+        this.setState({ team: response.team });
       });
-    });
   }
 
   render() {

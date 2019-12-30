@@ -1,20 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import LayoutTable from 'pages/table/LayoutTable';
-import LayoutTeam from 'pages/team/LayoutTeam';
+import routes from './routes';
 import './App.scss';
+
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={LayoutTable} />
-        <Route
-          path="/team/:teamId"
-          render={props =>
-            (<LayoutTeam id={Number(props.match.params.teamId)}></LayoutTeam>)
-          }
-        />
+        {routes.map((route) =>
+          <Route exact={route.exact} path={route.path} component={route.component} />
+        )}
       </Switch>
     </div>
   );
