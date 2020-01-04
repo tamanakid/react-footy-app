@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import routes from './routes';
 import './App.scss';
 
@@ -9,8 +9,9 @@ function App() {
     <div className="App">
       <Switch>
         {routes.map((route) =>
-          <Route exact={route.exact} path={route.path} component={route.component} />
+          <Route exact={route.exact} path={route.path} component={route.component} key={route.path} />
         )}
+        <Redirect from="/" to="/table" />
       </Switch>
     </div>
   );

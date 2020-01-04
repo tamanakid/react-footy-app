@@ -3,7 +3,7 @@ import LayoutTeam from 'pages/team/LayoutTeam';
 
 
 const routes = [
-  { path: "/", component: LayoutTable, exact: true },
+  { path: "/table", component: LayoutTable, exact: false },
   { path: "/team/:teamId", component: LayoutTeam, exact: false },
 ];
 
