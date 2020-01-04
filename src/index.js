@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
+
 import './index.scss';
 import App from 'pages/App';
-import { HashRouter } from 'react-router-dom';
 import * as serviceWorker from 'utils/serviceWorker';
+
+import { mountStorage } from './utils/storage';
+mountStorage();
+
 
 ReactDOM.render(
   <HashRouter>
