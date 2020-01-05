@@ -6,17 +6,14 @@ const token = '2e986fd544be4f28868d6e3befa4db2f';
 
 
 export const mountStorage = () => {
-	
-	if (JSON.parse(storage.getItem('leagues')) === null) {
-		storage.setItem("leagues", JSON.stringify(leagues));
+	if (getFromStorage('leagues') === null) {
+		setToStorage('leagues', leagues);
 	}
-
-	if (JSON.parse(storage.getItem('token')) === null) {
-		storage.setItem("token", JSON.stringify(token));
+	if (getFromStorage('token') === null) {
+		setToStorage('token', token);
 	}
-
-	if (storage.getItem('favorites') === null) {
-		storage.setItem('favorites', JSON.stringify(favorites));
+	if (getFromStorage('favorites') === null) {
+		setToStorage('favorites', favorites);
 	}
 };
 

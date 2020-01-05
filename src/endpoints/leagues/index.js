@@ -13,6 +13,9 @@ export const getAllLeagues = () => {
 					return (leaguesStorage.indexOf(competition.id) !== -1);
 				});
 				resolve(competitions);
+			})
+			.catch((err) => {
+				reject(err);
 			});
 	});
 };
