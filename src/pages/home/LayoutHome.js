@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
+import useFetchState from 'common/useFetchState'
 import CompHomeLeagueBlock from './CompHomeLeagueBlock';
 import { getAllLeagues } from 'endpoints/leagues';
 import './home.scss';
@@ -7,19 +8,7 @@ import './home.scss';
 
 function LayoutHome (props) {
 
-	const [fetchState, toggleFetch] = useState({ isFetching: false, error: null });
-	const [leagues, setLeagues] = useState([]);
-	useEffect(() => {
-		toggleFetch({ isFetching: true, error: null });
-		getAllLeagues()
-			.then((allLeagues) => {
-				setLeagues(allLeagues);
-				toggleFetch({ isFetching: false, error: null });
-			})
-			.catch((err) => {
-				toggleFetch({ isFetching: false, error: err });
-			});
-	}, []);
+	const { data: leagues, fetchState } = useFetchState({ endpoint: getAllLeagues });
 
 
 	if (fetchState.isFetching) {
