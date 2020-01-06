@@ -1,23 +1,26 @@
 import React from 'react';
 
-import withFetchState from 'common/hoc/withFetchState'
+import CompoLoadingAndError from 'common/components/CompLoadingAndError';
 import CompHomeLeagueBlock from './CompHomeLeagueBlock';
 import { getAllLeagues } from 'endpoints/leagues';
 import './home.scss';
 
 
 function LayoutHome (props) {
-	const leagues = props.data;
 
-	if (!leagues || !leagues.length) {
-		return <div>No competitions available</div>;
-	}
-	else {
-		return leagues.map((league) =>
-			<CompHomeLeagueBlock league={league} key={league.id} />
-		);
-	}
+	return (
+		<CompoLoadingAndError endpoint={getAllLeagues}>
+			{(leagues) => {
+				if (!leagues || !leagues.length) {
+					return <div>No competitions available</div>;
+				}
+				return leagues.map((league) =>
+					<CompHomeLeagueBlock league={league} key={league.id} />
+				)
+			}}
+		</CompoLoadingAndError>
+	);
 
 };
 
-export default withFetchState(LayoutHome, getAllLeagues);
+export default LayoutHome;
