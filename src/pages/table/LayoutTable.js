@@ -1,5 +1,5 @@
 import React from 'react';
-import CompTeamRow from './CompTeamRow';
+import ViewTeamRow from './ViewTeamRow';
 import { fetchTable } from 'api/table/apiTable';
 import './table.scss';
 
@@ -40,7 +40,7 @@ class LayoutTable extends React.Component {
             <div className="row-data">GD</div>
           </div>
           {this.state.teams.map((team, index) =>
-            <CompTeamRow team={team} key={index} />
+            <ViewTeamRow team={team} key={index} />
           )}
         </div>
       </div>

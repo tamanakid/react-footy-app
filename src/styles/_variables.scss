@@ -11,6 +11,9 @@ $colors: (
   'claret': #904,
 );
 
+$theme-main: #33a;
+$theme-secondary: #ec4;
+
 @each $name, $hex in $colors {
   @debug "#{$name} saturation: #{saturation($hex)}";
   @debug "#{$name} hue: #{hue($hex)}";

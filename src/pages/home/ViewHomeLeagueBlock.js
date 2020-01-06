@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CompHomeLeagueBlock ({ league }) {
+function ViewHomeLeagueBlock ({ league }) {
 
 	return (
-		<div className="home__league" key={league.id}>
+		<div className="league">
 			<div className="logo">
 				{league.emblemUrl ? (
 					<img src={league.emblemUrl} alt="logo"/>
@@ -19,4 +19,4 @@ function CompHomeLeagueBlock ({ league }) {
 }
 
 
-export default CompHomeLeagueBlock
+export default ViewHomeLeagueBlock;

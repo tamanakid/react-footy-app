@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class CompTeamRow extends React.Component {
+class ViewTeamRow extends React.Component {
 
   constructor(props) {
     super(props);
@@ -46,4 +46,4 @@ class CompTeamRow extends React.Component {
 }
 
 
-export default withRouter(CompTeamRow);
+export default withRouter(ViewTeamRow);
