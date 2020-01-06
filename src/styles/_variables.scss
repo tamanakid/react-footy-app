@@ -11,8 +11,14 @@ $colors: (
   'claret': #904,
 );
 
-$theme-main: #33a;
+
+$theme-main: #608;
+$theme-main-dark: #304;
+$theme-main-bg: #102;
+$theme-light-bg: #f7f7f7;
 $theme-secondary: #ec4;
+
+
 
 @each $name, $hex in $colors {
   @debug "#{$name} saturation: #{saturation($hex)}";

@@ -5,16 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.block-title {
-  font-size: 1.6rem;
+
+.App {
+  text-align: center;
+  height: 100vh;
+  font-family: 'Montserrat';
+  background: $theme-light-bg;
 }
 
-.block-subtitle {
-  font-size: 1.2rem;
-}

@@ -1,7 +1,8 @@
 import React from 'react';
+import Header from 'common/layout/Header'
 import ViewTeamRow from './ViewTeamRow';
 import { fetchTable } from 'api/table/apiTable';
-import './table.scss';
+
 
 class LayoutTable extends React.Component {
 
@@ -25,9 +26,9 @@ class LayoutTable extends React.Component {
   render() {
     return (
       <div className="table">
-        <div className="table--title">Table</div>
+        <Header title={'League Table'} isLarge={true} />
         <div className="table--contents">
-          <div className="table--contents--row bold">
+          <div className="table--contents--row is-bold">
             <div className="row-data">&nbsp;</div>
             <div className="row-name">Team</div>
             <div className="row-data">Pts</div>

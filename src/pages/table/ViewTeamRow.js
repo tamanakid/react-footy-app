@@ -31,7 +31,7 @@ class ViewTeamRow extends React.Component {
       <div className={`table--contents--row table--contents--row-team ${this.checkQualification()}`} onClick={this.goToTeam}>
         <div className="row-data">{this.props.team.pos}</div>
         <div className="row-name">{this.props.team.name}</div>
-        <div className="row-data bold">{this.props.team.points}</div>
+        <div className="row-data is-bold">{this.props.team.points}</div>
         <div className="row-data">{this.props.team.played}</div>
         <div className="row-data">{this.props.team.wins}</div>
         <div className="row-data">{this.props.team.draws}</div>

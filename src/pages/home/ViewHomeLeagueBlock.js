@@ -3,7 +3,7 @@ import React from 'react';
 function ViewHomeLeagueBlock ({ league }) {
 
 	return (
-		<div className="league">
+		<div className="competition">
 			<div className="logo">
 				{league.emblemUrl ? (
 					<img src={league.emblemUrl} alt="logo"/>

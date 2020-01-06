@@ -4,8 +4,8 @@
 
   &--title {
     height: 4rem;
-    background: #608;
-    color: #f7f7f7;
+    background: $theme-main;
+    color: $theme-light-bg;
     font-size: 1.5rem;
     padding: 2rem 10%;
   }
@@ -34,7 +34,7 @@
       }
       
       &-team:hover {
-        color: #304;
+        color: $theme-main-dark;
         background-color: #edf;
         border-radius: 5px;
         font-weight: bold;

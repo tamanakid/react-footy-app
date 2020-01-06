@@ -1,32 +1,37 @@
 import React from 'react';
 
+import Header from 'common/layout/Header';
 import CompLoadingAndError from 'common/components/CompLoadingAndError';
 import ViewHomeLeagueBlock from './ViewHomeLeagueBlock';
 import ViewHomeFavoritesMatches from './ViewHomeFavoritesMatches';
 import { getAllLeagues } from 'endpoints/leagues';
-import './home.scss';
 
 
 function LayoutHome (props) {
 
+	const title = 'React Footy App';
+
 	return (
-		<div className="home">
-			<div className="home__leagues">
-				<CompLoadingAndError endpoint={getAllLeagues}>
-					{(leagues) => {
-						if (!leagues || !leagues.length) {
-							return <div>No competitions available</div>;
-						}
-						return leagues.map((league) =>
-							<ViewHomeLeagueBlock league={league} key={league.id} />
-						)
-					}}
-				</CompLoadingAndError>
+		<React.Fragment>
+			<Header title={title} isLarge={true} />
+			<div className="l-home">
+				<div className="l-home__leagues">
+					<CompLoadingAndError endpoint={getAllLeagues}>
+						{(leagues) => {
+							if (!leagues || !leagues.length) {
+								return <div>No competitions available</div>;
+							}
+							return leagues.map((league) =>
+								<ViewHomeLeagueBlock league={league} key={league.id} />
+							)
+						}}
+					</CompLoadingAndError>
+				</div>
+				<div className="l-home__matches">
+					<ViewHomeFavoritesMatches />
+				</div>
 			</div>
-			<div className="home__matches">
-				<ViewHomeFavoritesMatches />
-			</div>
-		</div>
+		</React.Fragment>
 	);
 
 };

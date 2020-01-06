@@ -22,7 +22,7 @@ class CompLoadingAndError extends React.Component {
 		else if (this.state.error) {
 			return <div>There was an error fetching the data</div>;
 		}
-	return <div>{this.props.children(this.state.data)}</div>
+	return <React.Fragment>{this.props.children(this.state.data)}</React.Fragment>
 	}
 
 }
