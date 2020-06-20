@@ -20,8 +20,8 @@ $theme-secondary: #ec4;
 
 
 
-@each $name, $hex in $colors {
-  @debug "#{$name} saturation: #{saturation($hex)}";
-  @debug "#{$name} hue: #{hue($hex)}";
-  @debug "#{$name} lightness: #{lightness($hex)}";
-}
+// @each $name, $hex in $colors {
+//   @debug "#{$name} saturation: #{saturation($hex)}";
+//   @debug "#{$name} hue: #{hue($hex)}";
+//   @debug "#{$name} lightness: #{lightness($hex)}";
+// }
